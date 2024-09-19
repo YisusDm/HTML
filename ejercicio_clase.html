@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form enctype="multipart/form-data">
+        <fieldset>
+            <legend><h1><strong></strong>Datos de usuario.</strong></h1></legend>
+            <strong>ingrse una foto</strong><br>
+            <input type="file" name="foto"><br><br>
+            <strong>Ingrdr su nombre.</strong><br>
+            <input type="text" name="nombre"><br><br>
+            <strong>Correo electronico.</strong><br>
+            <input type="text" name="correo"><br><br>
+            <strong>Ingrese su contraseña.</strong><br>
+            <input type="password" name="pass"><br><br>
+            <strong>sexo:</strong><br>
+            <input type="radio" name="hombre" value="1">Hombre.
+            <input type="radio" name="mujer" value="1">Mujer.
+            <input type="radio" name="gay" value="1" disabled>Gay.
+            <input type="radio" name="otro" value="1" disabled>Otro.
+            <br><br>
+            <strong>Pais de origen.</strong><br>
+            <select name="pais">
+                <option neme="">celeccione.</option>
+                <option value="1">Colombia</option>
+                <option value="2">Argentina</option>
+                <option value="3">America</option>
+                <option value="4">USA</option>
+                <option value="5">Venezuela</option>
+                <option value="6">Portugal</option>
+                <option value="7">Peru</option>
+            </select><br><br>
+            <strong>Ciudad y Barrio.</strong><br>
+        <select name="articulo[]" multiple>
+            <optgroup label="Ciudad.">
+                <option value="1">Bogotá.</option>
+                <option value="2">Cali.</option>
+                <option value="3">Medellin.</option>
+                <option value="4">Barranquilla.</option>
+            </optgroup>
+            <optgroup label="Barrio.">
+                <option value="5">Villa sampedro.</option>
+                <option value="6">santamonica.</option>
+                <option value="7">Barrio abajo.</option>
+                <option value="8">La chinita.</option>
+            </optgroup>
+        </select><br><br>
+            <button type="submit">enviar.</button><br>
+            <input type="hidden" value="6666" name="id"/>
+    </fieldset>
+    </form>
+</body>
+</html>
+
+<!--
+    Select (cuadro de selección múltiple)
+    select (agrupamiento de opciones)
+    button
+    input file
+    input hidden
+    Agrupamiento de controles
+    Inhabilitar inputs
+-->

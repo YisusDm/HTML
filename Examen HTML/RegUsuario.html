@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="Ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+</head>
+<body bgcolor="#FFFFFF">
+    <h1> 
+        <p><b><center><font face="Comic Sans MS,Arial,Verdana" size="10" color="#FD6907">Examen html</font></center></b></p>
+        <a><center><img src="Logo sena.png" alt="logo sena"height="150" widht="150""></center></a>
+    </h1>
+    <h2>
+        <fieldset>
+            <legend align="left"><b><i><font face="Comic Sans MS,Arial,Verdana" size="6" color="#F40101">Menu de navegacion</font></i></b></legend>
+            <a href="index.html" target=_blank><b><i><font face="arial" size="4" color="#630BBD">Inicio</font></i></b></a><br>
+            <a href="RegUsuario.html" target=_blank><b><i><font face="arial" size="4" color="#630BBD">F registro de personas </font></i></b></a><br>
+            <a href="Regcursos.html" target=_blank><b><i><font face="arial" size="4" color="#630BBD">F registro de Catalogo cursos   </font></i></b></a><br>
+            <a href="RegFicha.html" target=_blank><b><i><font face="arial" size="4" color="#630BBD">F registro de fichas  </font></i></b></a><br>
+            <a href="Asistencia.html" target=_blank><b><i><font face="arial" size="4" color="#630BBD">F registro de asistencia de aprendices </font></i></b></a><br>
+        </fieldset>    
+    </h2>
+
+    <body bgcolor="#FFFFFF">
+        <fieldset>
+            <p align="left"><b><i><font face="arial" size="6" color="#FD6907">Formulario de registro de personas </font></i></b></p>
+                <form action=""method="post" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend align="center"><b><i><font face="Comic Sans MS,Arial,Verdana" size="4" color="#F40101">formulario registro de personas</font></i></b></legend>
+                        <label for="">Tipo de documento:</label>
+                        <select name="Tipo" id="tipo" required>
+                            <option value="">seleccione tipo de documento</option>
+                            <option value="">CC</option>
+                            <option value="">TI</option>
+                            <option value="">CE</option>
+                        </select><br><br>
+                        <label for="">Numero Documento:</label>
+                        <input type="text" name="Documento" required><br><br>
+                        <label for="">Nombres y apellidos:</label>
+                        <input type="text" name="Nombres_apellidos" required><br><br>
+                        <label for="">Correo:</label>
+                        <input type="text" name="correo" required><br><br>
+                        <label for="">Rol/Cargo:</label>
+                        <select name="Tipo" id="rol" required>
+                            <option value="">seleccione (rol/cargo)</option>
+                            <option value="">Administrador</option>
+                            <option value="">Instructor</option>
+                            <option value="">Aprendices</option>
+                        </select><br><br>
+                        
+                        <input type="hidden" name="persona" value="9:59">
+                        <button type="submit">Guardar</button>
+                    </fieldset>
+                </form><br>
+                <fieldset>
+                    <legend align="center"><b><i><font face="Comic Sans MS,Arial,Verdana" size="4" color="#F40101">Lista Usuarios</font></i></b></legend>
+                    <table border="1" bgcolor="#34CEC3">
+                                    
+                        <caption></caption>
+                        <tr>
+                                <th>Nombres y Apellidos</th>
+                                <th>Tipo de documento</th>
+                                <th>No. Documento</th>
+                                <th>Correo Sena</th>
+                                <th>Rol/Cargo</th>
+                                    
+                        </tr>
+                        <tr>
+                                <td>SHIRLEY ALVARADO RODRIGUEZ</td>
+                                <td>CC</td>
+                                <td>1.001.943.882</td>
+                                <th>salvarado28@misena.edu.co</td>
+                                <th>Aprendiz</th>    
+                        </tr>
+                        <tr>
+                                        
+                                <td>SANTIAGO DAVID GOMEZ BELTRAN</td>
+                                <td>CC</td>
+                                <td>1.001.943.253</td>
+                                <td>sdgomez352@misena.edu.co</td>
+                                <th>Aprendiz</th> 
+                        </tr>
+                        <tr>
+                                <td>CAMILO ANDRES BARRANCO RUA</td>
+                                <td>CC</td>
+                                <td>1.001.997.556</td>
+                                <td>cabarranco65@misena.edu.co</td>
+                                <th>Aprendiz</th> 
+                        </tr>
+                        
+                        <tr>
+                                <td>CARLOS ARTURO IRIARTE CONSUEGRA</td>
+                                <td>CC</td>
+                                <td>1.001.886.671</td>
+                                <td>cairiarte1@misena.edu.co</td>
+                                <th>Aprendiz</th> 
+                        </tr>
+                        
+                        <tr>
+                                <td>JESUS DAVID JARABA MONSALVO</td>
+                                <td>CC</td>
+                                <td>1.004.356.239</td>
+                                <td>jdavid.jarabam@gmail.com</td>
+                                <th>Aprendiz</th> 
+                        </tr>
+                        <tr>
+                            <td>FRANCISCO ENRIQUE JIMENEZ MARQUEZ</td>
+                            <td>CC</td>
+                            <td>1.002.212.947</td>
+                            <td>fejimenez749@misena.edu.co</td>
+                            <th>Aprendiz</th> 
+                        </tr>
+                    </table>
+                </fieldset>
+                    
+            </font></i></b></p>
+            
+        </fieldset>     
+
+    </body>
