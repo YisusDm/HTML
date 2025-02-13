@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Interactiva</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .btn-delete {
+            background-color: #FF4136;
+        }
+        .btn-delete:hover {
+            background-color: #C0392B;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Página Interactiva</h1>
+
+    <div class="container">
+        <h2>Agregar un ítem</h2>
+
+        <input type="text" id="inputItem" placeholder="Escribe algo...">
+        <button onclick="addItem()">Agregar</button>
+
+        <table id="itemTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Elemento</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas se agregarán aquí dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let itemList = [];
+        let id = 0;
+
+        function addItem() {
+            const input = document.getElementById('inputItem').value;
+
+            if (input.trim()) {
+                id++;
+                itemList.push({ id: id, name: input });
+                updateTable();
+                document.getElementById('inputItem').value = ''; // Limpiar input
+            } else {
+                alert("El campo no puede estar vacío");
+            }
+        }
+
+        function updateTable() {
+            const tableBody = document.querySelector('#itemTable tbody');
+            tableBody.innerHTML = '';
+
+            itemList.forEach((item, index) => {
+                let row = `<tr>
+                            <td>${index + 1}</td>
+                            <td>${item.name}</td>
+                            <td><button class="btn-delete" onclick="deleteItem(${item.id})">Eliminar</button></td>
+                           </tr>`;
+                tableBody.innerHTML += row;
+            });
+        }
+
+        function deleteItem(itemId) {
+            itemList = itemList.filter(item => item.id !== itemId);
+            updateTable();
+        }
+    </script>
+
+</body>
+</html>
